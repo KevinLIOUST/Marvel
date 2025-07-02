@@ -10,3 +10,8 @@ body {
 body header h1 {
   font-size: 60px;
 }
+
+/* Pour une fiche de super-héros */
+.fiche-super-heros {
+  background-color: rgb(193, 49, 49);
+}
