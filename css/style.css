@@ -4,6 +4,7 @@
 /* La même police d'écriture pour toute la page */
 body {
   font-family: Delius;
+  background-color: black;
 }
 
 /* Taille du texte pour le titre de la page */

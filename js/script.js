@@ -5,6 +5,16 @@ function afficherSuperHeros() {
         .then(data => {
             console.log(data);
 
+            function createLi(powers) {
+                let liList = "";
+
+                powers.forEach(power => {
+                    liList += `<li>${power}</li>`;
+                })
+
+                return liList;
+            }
+
             data.forEach(hero => {
                 document.getElementById("super-heros").innerHTML +=
                     `<div class="fiche-super-heros rounded-3 m-4 w-25">
@@ -13,8 +23,9 @@ function afficherSuperHeros() {
                     </div>
                     <p class="text-white m-3"><b>Nom : </b>${hero.name}</p>
                     <p class="text-white m-3"><b>Vrai nom : </b>${hero.realName}</p>
-                    <p class="text-white m-3"><b>Super-pouvoirs :</b>${hero.powers}</p>
-                    <ul class="list m-3">
+                    <p class="text-white m-3"><b>Super-pouvoirs :</b></p>
+                <ul class="list m-3 text-white" id="listPowers">
+                    ${createLi(hero.powers)}
                 </ul>
                     <p class="text-white m-3"><b>Ville : </b> ${hero.city}</p>
                     <p class="text-white m-3"><b>Date d'apparition : </b>${hero.firstAppearance}</p>
