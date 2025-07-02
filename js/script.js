@@ -19,7 +19,7 @@ function afficherSuperHeros() {
                 document.getElementById("super-heros").innerHTML +=
                     `<div class="fiche-super-heros rounded-3 m-4 w-25">
                     <div class="d-flex justify-content-center">
-                        <img src="data:image/png;base64, ${hero.image}" alt="Super-Héros 1">
+                        <img class="bg-light rounded-3 m-4 pt-5 px-5 ps-5" src="data:image/png;base64, ${hero.image}" alt="Super-Héros 1">
                     </div>
                     <p class="text-white m-3"><b>Nom : </b>${hero.name}</p>
                     <p class="text-white m-3"><b>Vrai nom : </b>${hero.realName}</p>
